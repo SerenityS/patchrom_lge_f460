@@ -5320,7 +5320,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
     const-string/jumbo v2, "video"
 
@@ -5328,9 +5328,10 @@
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
     .line 950
+    :cond_0
     :goto_0
     return-void
 
@@ -5359,6 +5360,14 @@
 
     .line 938
     :cond_1
+    iget-object v0, p0, Landroid/media/MediaScanner$MyMediaScannerClient;->mMimeType:Ljava/lang/String;
+ 
+    invoke-static {v0, p1}, Landroid/media/MediaScannerInjector;->keepMimeType(Ljava/lang/String;Ljava/lang/String;)Z
+ 
+    move-result v0
+ 
+    if-nez v0, :cond_0
+
     iput-object p1, p0, Landroid/media/MediaScanner$MyMediaScannerClient;->mMimeType:Ljava/lang/String;
 
     .line 949

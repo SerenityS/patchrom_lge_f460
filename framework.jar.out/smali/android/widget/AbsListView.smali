@@ -3026,6 +3026,8 @@
     const/4 v1, 0x0
 
     .line 3736
+    invoke-static {p0, p1}, Landroid/widget/AbsListViewInjector;->initOnTouchDown(Landroid/widget/AbsListView;Landroid/view/MotionEvent;)V
+
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v4
@@ -11189,6 +11191,16 @@
 
     .end local v1    # "child":Landroid/view/View;
     :cond_6
+    iget v8, p0, Landroid/widget/AbsListView;->mLastY:I
+
+    iget v10, p0, Landroid/widget/AbsListView;->mDownMotionY:I
+
+    sub-int/2addr v8, v10
+
+    sub-int v8, v7, v8
+ 
+    iput v8, p0, Landroid/widget/AbsListView;->mDownMotionY:I
+
     iput v7, p0, Landroid/widget/AbsListView;->mLastY:I
 
     goto :goto_1

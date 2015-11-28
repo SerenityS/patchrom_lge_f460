@@ -2989,8 +2989,8 @@
         0x39 -> :sswitch_39
         0x3a -> :sswitch_3a
         0x3b -> :sswitch_3b
-        0x3c -> :sswitch_3c
-        0x3d -> :sswitch_3d
+        0x3c -> :sswitch_miui_0
+        0x3d -> :sswitch_miui_1
         0x3e -> :sswitch_3e
         0x3f -> :sswitch_3f
         0x40 -> :sswitch_40

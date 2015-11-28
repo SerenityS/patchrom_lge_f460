@@ -494,6 +494,10 @@
 
     .line 470
     :cond_2
+    iget-object v2, p0, Landroid/app/DialogFragment;->mDialog:Landroid/app/Dialog;
+ 
+    if-eqz v2, :cond_0
+
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getView()Landroid/view/View;
 
     move-result-object v1

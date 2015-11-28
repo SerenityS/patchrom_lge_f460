@@ -348,7 +348,7 @@
     invoke-direct {p0}, Landroid/media/MiniThumbFile;->removeOldFile()V
 
     .line 118
-    const/4 v6, 0x3
+    const/4 v6, 0x4
 
     invoke-direct {p0, v6}, Landroid/media/MiniThumbFile;->randomAccessFilePath(I)Ljava/lang/String;
 
@@ -877,11 +877,11 @@
     .line 208
     iget-object v0, p0, Landroid/media/MiniThumbFile;->mBuffer:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->get()B
+    invoke-static {v0, p1, p2}, Landroid/media/MiniThumbFile$Injector;->isMatch(Ljava/nio/ByteBuffer;J)Z
 
     move-result v0
 
-    if-ne v0, v11, :cond_4
+    if-eqz v0, :cond_1
 
     .line 209
     iget-object v0, p0, Landroid/media/MiniThumbFile;->mBuffer:Ljava/nio/ByteBuffer;

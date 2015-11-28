@@ -1260,6 +1260,8 @@
     .param p0, "fileType"    # I
 
     .prologue
+    const/16 v2, 0x3e9
+
     const/4 v1, 0x1
 
     .line 276
@@ -1287,6 +1289,11 @@
     if-le p0, v2, :cond_2
 
     :cond_1
+    if-lt p0, v2, :cond_3
+ 
+    if-gt p0, v2, :cond_3
+ 
+    :cond_2
     const/16 v2, 0x12c
 
     if-lt p0, v2, :cond_3

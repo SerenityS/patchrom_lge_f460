@@ -418,7 +418,7 @@
     .prologue
     const/4 v4, 0x1
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     .line 735
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -426,23 +426,26 @@
     .line 647
     invoke-static {}, Landroid/view/ViewConfiguration;->getScrollFriction()F
 
-    move-result v2
+    move-result v1
 
-    iput v2, p0, Landroid/widget/OverScroller$SplineOverScroller;->mFlingFriction:F
+    iput v1, p0, Landroid/widget/OverScroller$SplineOverScroller;->mFlingFriction:F
 
     .line 650
-    iput v3, p0, Landroid/widget/OverScroller$SplineOverScroller;->mState:I
+    iput v2, p0, Landroid/widget/OverScroller$SplineOverScroller;->mState:I
 
     .line 678
-    const/4 v2, 0x0
 
     iput-object v2, p0, Landroid/widget/OverScroller$SplineOverScroller;->mPerf:Lorg/codeaurora/Performance;
 
     .line 679
-    iput-boolean v3, p0, Landroid/widget/OverScroller$SplineOverScroller;->mIsPerfLockAcquired:Z
+    iput-boolean v2, p0, Landroid/widget/OverScroller$SplineOverScroller;->mIsPerfLockAcquired:Z
 
     .line 680
-    iput-boolean v3, p0, Landroid/widget/OverScroller$SplineOverScroller;->mIsPerfBoostEnabled:Z
+    iput-boolean v2, p0, Landroid/widget/OverScroller$SplineOverScroller;->mIsPerfBoostEnabled:Z
+
+    const/high16 v1, 0x3f800000      # 1.0f
+
+    iput v1, p0, Landroid/widget/OverScroller$SplineOverScroller;->mDecelerationScale:F
 
     .line 736
     iput-boolean v4, p0, Landroid/widget/OverScroller$SplineOverScroller;->mFinished:Z
