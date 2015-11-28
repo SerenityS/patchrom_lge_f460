@@ -1,0 +1,19 @@
+*** WifiEnterpriseConfig$Eap.smali	2015-11-28 22:11:20.902740567 +0900
+--- WifiEnterpriseConfig$Eap.smali	2015-11-28 22:09:38.978737025 +0900
+***************
+*** 33,39 ****
+      .locals 3
+  
+      .prologue
+!     const/4 v0, 0x4
+  
+      new-array v0, v0, [Ljava/lang/String;
+  
+--- 33,39 ----
+      .locals 3
+  
+      .prologue
+!     const/4 v0, 0x6
+  
+      new-array v0, v0, [Ljava/lang/String;
+  

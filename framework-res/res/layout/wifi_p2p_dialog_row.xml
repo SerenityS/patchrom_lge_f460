@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/wifi_item"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="#ff000000" android:id="@id/name" android:fontFamily="SmartGothic" style="@style/wifi_item_label" />
+    <TextView android:textSize="18.0sp" android:textColor="#ff000000" android:id="@id/value" android:fontFamily="SmartGothic" android:textAlignment="viewStart" style="@style/wifi_item_content" />
+</LinearLayout>

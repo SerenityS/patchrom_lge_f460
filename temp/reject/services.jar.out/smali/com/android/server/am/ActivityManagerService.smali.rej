@@ -1,0 +1,58 @@
+*** ActivityManagerService.smali	2015-11-28 22:11:02.442739926 +0900
+--- ActivityManagerService.smali	2015-11-28 22:09:19.634736353 +0900
+***************
+*** 3864,3869 ****
+  
+      .end local p3    # "intent":Landroid/content/Intent;
+      .local v15, "intent":Landroid/content/Intent;
+      const/16 v3, 0x10
+  
+      invoke-virtual {v15, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+--- 3882,3891 ----
+  
+      .end local p3    # "intent":Landroid/content/Intent;
+      .local v15, "intent":Landroid/content/Intent;
++     move-object/from16 v0, p2
++ 
++     invoke-virtual {v15, v0}, Landroid/content/Intent;->setSender(Ljava/lang/String;)V
++ 
+      const/16 v3, 0x10
+  
+      invoke-virtual {v15, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+***************
+*** 14587,14592 ****
+      .end local v20    # "ip":I
+      .end local v23    # "pmap":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Landroid/util/SparseArray<Ljava/lang/Long;>;>;"
+      :cond_9
+      const/16 v8, -0x64
+  
+      const/4 v10, 0x1
+--- 14615,14642 ----
+      .end local v20    # "ip":I
+      .end local v23    # "pmap":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Landroid/util/SparseArray<Ljava/lang/Long;>;>;"
+      :cond_9
++     :try_start_miui_1
++     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
++ 
++     move-result-object v4
++ 
++     const/4 v5, 0x0
++ 
++     move-object/from16 v0, p1
++ 
++     invoke-interface {v4, v0, v5}, Landroid/content/pm/IPackageManager;->getPackageUid(Ljava/lang/String;I)I
++ 
++     move-result v4
++ 
++     move-object/from16 v0, p0
++ 
++     move-object/from16 v1, p1
++ 
++     invoke-direct {v0, v4, v1}, Lcom/android/server/am/ActivityManagerService;->killNativePackageProcesses(ILjava/lang/String;)V
++     :try_end_miui_1
++     .catch Landroid/os/RemoteException; {:try_start_miui_1 .. :try_end_miui_1} :catch_miui_0
++ 
++     :goto_miui_0
+      const/16 v8, -0x64
+  
+      const/4 v10, 0x1

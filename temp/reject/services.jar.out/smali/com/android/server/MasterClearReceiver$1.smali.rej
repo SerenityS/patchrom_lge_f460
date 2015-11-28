@@ -1,0 +1,41 @@
+*** MasterClearReceiver$1.smali	2015-11-28 22:11:00.362739854 +0900
+--- MasterClearReceiver$1.smali	2015-11-28 22:09:16.170736233 +0900
+***************
+*** 42,54 ****
+  
+  # virtual methods
+  .method public run()V
+!     .locals 3
+  
+      .prologue
+      :try_start_0
+      iget-object v1, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
+  
+!     invoke-static {v1}, Landroid/os/RecoverySystem;->rebootWipeUserData(Landroid/content/Context;)V
+  
+      const-string v1, "MasterClear"
+  
+--- 46,68 ----
+  
+  # virtual methods
+  .method public run()V
+!     .locals 5
+  
+      .prologue
+      :try_start_0
+      iget-object v1, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
+  
+!     iget-object v2, p0, Lcom/android/server/MasterClearReceiver$1;->val$intent:Landroid/content/Intent;
+! 
+!     const-string v3, "format_sdcard"
+! 
+!     const/4 v4, 0x0
+! 
+!     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+! 
+!     move-result v2
+! 
+!     invoke-static {v1, v2}, Landroid/os/RecoverySystem;->rebootFactoryReset(Landroid/content/Context;Z)V
+  
+      const-string v1, "MasterClear"
+  

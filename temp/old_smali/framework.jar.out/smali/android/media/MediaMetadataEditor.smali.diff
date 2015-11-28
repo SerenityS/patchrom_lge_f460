@@ -1,0 +1,17 @@
+*** ./smali/android/media/MediaMetadataEditor.smali	2015-11-28 22:11:09.282740164 +0900
+--- /home/serenitys/patchrom-v6/f460/temp/new_smali/framework.jar.out/./smali/android/media/MediaMetadataEditor.smali	2015-11-28 22:09:27.370736622 +0900
+***************
+*** 140,145 ****
+--- 140,151 ----
+  
+      sget-object v0, Landroid/media/MediaMetadataEditor;->METADATA_KEYS_TYPE:Landroid/util/SparseIntArray;
+  
++     const/16 v1, 0x3e8
++ 
++     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
++ 
++     sget-object v0, Landroid/media/MediaMetadataEditor;->METADATA_KEYS_TYPE:Landroid/util/SparseIntArray;
++ 
+      const/16 v1, 0x64
+  
+      invoke-virtual {v0, v1, v5}, Landroid/util/SparseIntArray;->put(II)V

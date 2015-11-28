@@ -1,0 +1,28 @@
+*** ./smali/android/util/DisplayMetrics.smali	2015-11-28 22:11:23.850740670 +0900
+--- /home/serenitys/patchrom-v6/f460/temp/new_smali/framework.jar.out/./smali/android/util/DisplayMetrics.smali	2015-11-28 22:09:41.926737128 +0900
+***************
+*** 21,26 ****
+--- 21,28 ----
+  
+  .field public static final DENSITY_MEDIUM:I = 0xa0
+  
++ .field public static final DENSITY_NXHGITH:I
++ 
+  .field public static final DENSITY_TV:I = 0xd5
+  
+  .field public static final DENSITY_XHIGH:I = 0x140
+***************
+*** 65,70 ****
+--- 67,78 ----
+      .locals 1
+  
+      .prologue
++     invoke-static {}, Landroid/util/MiuiDisplayMetrics;->getNxhdpiDensity()I
++ 
++     move-result v0
++ 
++     sput v0, Landroid/util/DisplayMetrics;->DENSITY_NXHGITH:I
++ 
+      invoke-static {}, Landroid/util/DisplayMetrics;->getDeviceDensity()I
+  
+      move-result v0

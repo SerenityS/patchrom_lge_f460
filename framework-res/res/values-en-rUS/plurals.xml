@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="num_days_ago">
+        <item quantity="other">%d days ago</item>
+        <item quantity="one">Yesterday</item>
+    </plurals>
+    <plurals name="abbrev_num_days_ago">
+        <item quantity="other">%d days ago</item>
+        <item quantity="one">Yesterday</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">in %d mins</item>
+        <item quantity="one">in 1 mins</item>
+    </plurals>
+</resources>

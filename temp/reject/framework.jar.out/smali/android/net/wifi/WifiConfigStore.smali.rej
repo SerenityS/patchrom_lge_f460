@@ -1,0 +1,40 @@
+*** WifiConfigStore.smali	2015-11-28 22:11:20.926740568 +0900
+--- WifiConfigStore.smali	2015-11-28 22:09:38.998737026 +0900
+***************
+*** 5744,5749 ****
+  
+      invoke-direct {p0, v0}, Landroid/net/wifi/WifiConfigStore;->log(Ljava/lang/String;)V
+  
+      invoke-virtual {p0}, Landroid/net/wifi/WifiConfigStore;->loadConfiguredNetworks()V
+  
+      invoke-virtual {p0}, Landroid/net/wifi/WifiConfigStore;->enableAllNetworks()V
+--- 5791,5800 ----
+  
+      invoke-direct {p0, v0}, Landroid/net/wifi/WifiConfigStore;->log(Ljava/lang/String;)V
+  
++     iget-object v0, p0, Landroid/net/wifi/WifiConfigStore;->mWifiAutoConnController:Landroid/net/wifi/WifiAutoConnController;
++ 
++     invoke-virtual {v0}, Landroid/net/wifi/WifiAutoConnController;->loadAndEnableAllNetworks()V
++ 
+      invoke-virtual {p0}, Landroid/net/wifi/WifiConfigStore;->loadConfiguredNetworks()V
+  
+      invoke-virtual {p0}, Landroid/net/wifi/WifiConfigStore;->enableAllNetworks()V
+***************
+*** 6371,6376 ****
+  
+      const/4 v6, -0x1
+  
+      if-ne p1, v6, :cond_0
+  
+      :goto_0
+--- 6422,6431 ----
+  
+      const/4 v6, -0x1
+  
++     iget-object v4, p0, Landroid/net/wifi/WifiConfigStore;->mWifiAutoConnController:Landroid/net/wifi/WifiAutoConnController;
++ 
++     invoke-virtual {v4, p1}, Landroid/net/wifi/WifiAutoConnController;->selectNetwork(I)V
++ 
+      if-ne p1, v6, :cond_0
+  
+      :goto_0

@@ -1,0 +1,44 @@
+*** AbsListView.smali	2015-11-28 22:11:15.954740395 +0900
+--- AbsListView.smali	2015-11-28 22:09:34.002736853 +0900
+***************
+*** 2172,2177 ****
+      .prologue
+      const/4 v6, 0x0
+  
+      invoke-virtual {p1, v6}, Landroid/view/MotionEvent;->getPointerId(I)I
+  
+      move-result v4
+--- 2211,2218 ----
+      .prologue
+      const/4 v6, 0x0
+  
++     invoke-static {p0, p1}, Landroid/widget/AbsListViewInjector;->initOnTouchDown(Landroid/widget/AbsListView;Landroid/view/MotionEvent;)V
++ 
+      invoke-virtual {p1, v6}, Landroid/view/MotionEvent;->getPointerId(I)I
+  
+      move-result v4
+***************
+*** 10148,10153 ****
+  
+      .end local v1    # "child":Landroid/view/View;
+      :cond_6
+      iput v7, p0, Landroid/widget/AbsListView;->mLastY:I
+  
+      goto :goto_1
+--- 10247,10262 ----
+  
+      .end local v1    # "child":Landroid/view/View;
+      :cond_6
++     iget v8, p0, Landroid/widget/AbsListView;->mLastY:I
++ 
++     iget v10, p0, Landroid/widget/AbsListView;->mDownMotionY:I
++ 
++     sub-int/2addr v8, v10
++ 
++     sub-int v8, v7, v8
++ 
++     iput v8, p0, Landroid/widget/AbsListView;->mDownMotionY:I
++ 
+      iput v7, p0, Landroid/widget/AbsListView;->mLastY:I
+  
+      goto :goto_1

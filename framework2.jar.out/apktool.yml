@@ -1,0 +1,4 @@
+version: 2.0.0-RC4
+apkFileName: framework2.jar
+unknownFiles:
+  CHANGELOG: '8'

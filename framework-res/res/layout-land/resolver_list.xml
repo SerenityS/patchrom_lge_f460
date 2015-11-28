@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="?dividerHorizontal" android:showDividers="middle" android:dividerPadding="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ListView android:id="@id/resolver_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/checkboxBar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/checkuse" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <CheckBox android:layout_gravity="center_vertical" android:id="@id/alwaysUse" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:layout_marginStart="8.0dip" android:layout_marginEnd="5.0dip" />
+            <TextView android:textSize="18.0dip" android:textColor="#ff000000" android:id="@id/alwaysUseText" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="8.0dip" android:text="@string/alwaysUse" />
+        </LinearLayout>
+        <TextView android:textSize="18.0dip" android:textColor="#ff000000" android:id="@id/clearDefaultHint" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="8.0dip" android:text="@string/clearDefaultHintMsg" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/button_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:measureWithLargestChild="true" android:layoutDirection="ltr" style="?android:attr/buttonBarStyle">
+            <Button android:enabled="false" android:textSize="18.0dip" android:layout_gravity="end" android:id="@id/allow_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/alert_dialog_button_bar_height" android:text="@string/ok" android:maxLines="2" android:layout_weight="1.0" android:onClick="onButtonClick" style="?android:attr/buttonBarButtonStyle" />
+            <Button android:id="@id/button_always" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <Button android:id="@id/button_once" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

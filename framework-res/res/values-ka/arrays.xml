@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>მთავარი გვერდი</item>
+        <item>სამუშაო</item>
+        <item>სხვა</item>
+        <item>ინდივიდუალური</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>სამუშაო</item>
+        <item>სხვა</item>
+        <item>ინდივიდუალური</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>მთავარი გვერდი</item>
+        <item>მობილური</item>
+        <item>სამუშაო</item>
+        <item>სამსახურის ფაქსი</item>
+        <item>მთავარი ფაქსი</item>
+        <item>პეიჯერი</item>
+        <item>სხვა</item>
+        <item>ინდივიდუალური</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>მთავარი გვერდი</item>
+        <item>სამუშაო</item>
+        <item>სხვა</item>
+        <item>ინდივიდუალური</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>მთავარი გვერდი</item>
+        <item>სამუშაო</item>
+        <item>სხვა</item>
+        <item>ინდივიდუალური</item>
+    </string-array>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="num_seconds_ago">
+        <item quantity="other">%d စကၠန္႔အၾကာက</item>
+        <item quantity="one">လြန္ခဲ့ေသာ ၁ စကၠန္႔</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">%d မိနစ္အၾကာက</item>
+        <item quantity="one">၁ မိနစ္မတိုင္ခင္က</item>
+    </plurals>
+    <plurals name="num_hours_ago">
+        <item quantity="other">%d နာရီအၾကာက</item>
+        <item quantity="one">၁နာရီအၾကာက</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">လြန္ခဲ့ေသာ %d ရက္</item>
+    </plurals>
+    <plurals name="num_days_ago">
+        <item quantity="other">%d ရက္အၾကာက</item>
+        <item quantity="one">မေန႔က</item>
+    </plurals>
+    <plurals name="in_num_seconds">
+        <item quantity="other">%d စကၠန္႔ အတြင္း</item>
+        <item quantity="one">၁ စကၠန္.တြင္</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">%dမိနစ္ အတြင္း</item>
+        <item quantity="one">၁ မိနစ္တြင္</item>
+    </plurals>
+    <plurals name="in_num_hours">
+        <item quantity="other">%d နာရီအတြင္း</item>
+        <item quantity="one">တစ္နာရီအတြင္း</item>
+    </plurals>
+    <plurals name="in_num_days">
+        <item quantity="other">%d ေန႔အတြင္း</item>
+        <item quantity="one">မနက္ျဖန္</item>
+    </plurals>
+    <plurals name="abbrev_num_seconds_ago">
+        <item quantity="other">%d စကၠန္႔အၾကာက</item>
+        <item quantity="one">လြန္ခဲ့ေသာ ၁ စကၠန္႔</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">%d မိနစ္အၾကာက</item>
+        <item quantity="one">လြန္ခဲ့ေသာ ၁ မိနစ္</item>
+    </plurals>
+    <plurals name="abbrev_num_hours_ago">
+        <item quantity="other">%d နာရီအၾကာက</item>
+        <item quantity="one">၁နာရီအၾကာက</item>
+    </plurals>
+    <plurals name="abbrev_num_days_ago">
+        <item quantity="other">%d ရက္အၾကာက</item>
+        <item quantity="one">မေန႔က</item>
+    </plurals>
+    <plurals name="abbrev_in_num_seconds">
+        <item quantity="other">%d စကၠန္႔ အတြင္း</item>
+        <item quantity="one">၁ စကၠန္႕တြင္</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">%d မိနစ္ အတြင္း</item>
+        <item quantity="one">၁ မိနစ္တြင္</item>
+    </plurals>
+    <plurals name="abbrev_in_num_hours">
+        <item quantity="other">%d နာရီအတြင္း</item>
+        <item quantity="one">တစ္နာရီအတြင္း</item>
+    </plurals>
+    <plurals name="abbrev_in_num_days">
+        <item quantity="other">%d ေန႔အတြင္း</item>
+        <item quantity="one">မနက္ျဖန္</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d စကၠန္႔</item>
+        <item quantity="one">၁စကၠန္႔</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d မိနစ္မ်ား</item>
+        <item quantity="one">၁ မိနစ္</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d နာရီ</item>
+        <item quantity="one">၁ နာရီ</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi ကြန္ယက္ ရႏုိင္သည္</item>
+        <item quantity="one">Wi-Fi ကြန္ယက္ ရႏုိင္သည္</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">ဖြင့္ထားေသာ Wi-Fi ကြန္ယက္ ရႏုိင္သည္</item>
+        <item quantity="one">ဖြင့္ထားေသာ Wi-Fi ကြန္ရက္ ရႏုိင္သည္</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d ဧ။္%2$d</item>
+        <item quantity="one">တူညီခ်က္တခု</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">%d စကၠန္႔ၾကာလွ်င္ထပ္ၾကိဳးစားပါ။</item>
+        <item quantity="one">1စကၠန္႔ၾကာလွ်င္ထပ္ၾကိဳးစားပါ။</item>
+    </plurals>
+</resources>

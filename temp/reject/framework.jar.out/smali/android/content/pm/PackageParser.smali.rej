@@ -1,0 +1,19 @@
+*** PackageParser.smali	2015-11-28 22:11:26.714740769 +0900
+--- PackageParser.smali	2015-11-28 22:09:44.794737228 +0900
+***************
+*** 15179,15185 ****
+      .local v25, "cookie":I
+      if-eqz v25, :cond_4
+  
+!     new-instance v32, Landroid/content/res/Resources;
+  
+      const/4 v6, 0x0
+  
+--- 15179,15185 ----
+      .local v25, "cookie":I
+      if-eqz v25, :cond_4
+  
+!     new-instance v32, Landroid/content/res/MiuiResources;
+  
+      const/4 v6, 0x0
+  
