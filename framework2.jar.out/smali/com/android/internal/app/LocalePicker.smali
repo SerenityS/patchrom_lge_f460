@@ -828,7 +828,7 @@
 
     .line 327
     :cond_c
-    new-instance v, Landroid/miui/LocaleComparator;
+    new-instance v3, Landroid/miui/LocaleComparator;
 
     invoke-direct {v3}, Landroid/miui/LocaleComparator;-><init>()V
 
