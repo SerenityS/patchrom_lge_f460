@@ -828,7 +828,11 @@
 
     .line 327
     :cond_c
-    invoke-static {v7}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
+    new-instance v, Landroid/miui/LocaleComparator;
+
+    invoke-direct {v3}, Landroid/miui/LocaleComparator;-><init>()V
+
+    invoke-static {v7, v3}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
     .line 329
     const-string v3, "layout_inflater"
